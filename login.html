@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link href="basic.css" rel="stylesheet">
+    </head>
+    <style>
+    input[type=text],
+    input[type=password] {
+    padding: 12px 8px;
+    margin: 5px 0;
+    display: flex;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+    }
+    .bg-img {
+  background-image: url("bg-img1.jpg");
+  background-color: black;
+
+  min-height: 380px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+    .login{
+    width:400px;
+    height:480px;
+    background:rgb(231, 188, 188);
+    color:rgb(46, 44, 44);
+    top:50%;
+    left:80%;
+    position: absolute;
+    transform: translate(-50%,-25%);
+    box-sizing: border-box;
+    padding: 50px 28px;
+    border-radius: 16px;
+    }
+   
+    #up{
+        
+        font-family: Arial, sans-serif;
+        font-size:20px;
+    }
+    .head{
+        
+        font-family:Arial, sans-serif;
+        font-size:35px;
+        text-align: center;
+    }
+    .button{
+        background-color: rgb(248, 90, 90);
+        text-align: center;
+        padding: 14px 10px;
+        margin: 6px 10px;
+        border: none;
+        cursor: pointer;
+        width: 42.7%;
+        border-radius: 18px;
+    }
+     a{
+        display: inline-block;
+        font-family:Arial, sans-serif;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 15px;
+        color:darkgray;
+        
+        }
+    a:hover{
+    color:black;
+    }   
+    
+</style>
+
+    <body class="bg-img">
+        <div class="login">
+            <form action="login.php" method="post">
+                <div class="container">
+                    <div class="head"><label id="head1">Welcome Back </label></div><br><br>
+                    <label id="up" ><b>Username</b></label><br>
+                    <input type="text" placeholder="Enter Username" size="45" name="uname" required>
+                    <br>
+                    <label id="up"><b>Password</b></label><br>
+                    <input type="password" placeholder="Enter Password" size="45" maxlength="10" name="psw" required>
+                    <br>
+                                
+                    <button type="submit" class="button" onclick ="getProfile()">Login</button>
+                    <button type="button" class="button" onclick="back()">Cancel</button><br><br>
+                    <a href="#"  style=" padding-left: 95px;" >Forgot password?</a><br>
+                    <a href="#" style="padding-left: 80px"onclick="location.href='signup.html'">Don't have an account</a>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            function back()
+            {
+               var check= confirm("Are you sure?");
+               if(check == true)
+                    return location.href='index.html';
+            
+            }
+        </script>
+    </body>
+</html>
